@@ -27,6 +27,42 @@ int main() {
                 break;
 
 	// deus tenha piedade de mim 
+
+	case 2:
+                printf("\nDigite o valor para deposito: R$ ");
+                scanf("%f", &valor);
+                if (valor > 0) {
+                    saldo = saldo + valor;
+                    printf("Deposito realizado com sucesso!\n");
+                } else {
+                    printf("Valor invalido!\n");
+                }
+                break;
+
+            case 3:
+                printf("\nDigite o valor para saque: R$ ");
+                scanf("%f", &valor);
+                if (valor > 0 && valor <= saldo) {
+                    saldo = saldo - valor;
+                    printf("Saque realizado com sucesso!\n");
+                } else {
+                    printf("Saldo insuficiente ou valor invalido!\n");
+                }
+                break;
+
+            case 4:
+                printf("\nDigite o valor do emprestimo que deseja: R$ ");
+                scanf("%f", &valor);
+                if (valor > 0) {
+                    saldo = saldo + valor;
+                    emprestimo_devedor = emprestimo_devedor + valor;
+                    printf("Emprestimo aprovado e adicionado ao seu saldo!\n");
+                } else {
+                    printf("Valor invalido!\n");
+                }
+                break;
+
+		//deus eh maravilhoso cara
         }
     }
 
